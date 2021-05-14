@@ -35,7 +35,7 @@ class BillApp:
         bill_btn.place(x=1250, y=95, height=25, width=90)
 
         f2 = Label(self.root, text="Morning Beverages: ", bg="sandy brown", fg="black",
-                    font=("times new roman", 20, "bold"))
+                   font=("times new roman", 20, "bold"))
         f2.place(x=10, y=160, width=200)
 
         # Adding Drinks.
@@ -115,38 +115,42 @@ class BillApp:
         scrol_y.config(command=self.txtarea.yview)
         self.txtarea.pack(fill=BOTH, expand=1)
 
-        # Menu Frame.
+        # Bill Menu Frame.
 
-        f6 = LabelFrame(self.root, bd=10, relief="groove",bg = "sandy brown", text="Bill Menu", font=("times", 20, "bold"))
-        f6.place(x=0, y=630,relwidth = 1 , height = 140)
-        m1 = Label(f6, text="Total Beverage Price", bg = "sandy brown",font=("Times", 15, "bold")).grid(row=0, column=0, padx=20, pady=1,
-                                                                                     sticky="W")
-        m1_e = Entry(f6 ,width = 18 , font="arial 15" , bd = 3 , relief = "sunken").grid(row = 0 , column = 1 , padx = 10 , pady = 1)
-
-        m2 = Label(f6, text="Total Dishes Price", bg="sandy brown", font=("Times", 15, "bold")).grid(row=1, column=0,
+        f6 = LabelFrame(self.root, bd=10, relief="groove", bg="sandy brown", text="Bill Menu",
+                        font=("times", 20, "bold"))
+        f6.place(x=0, y=630, relwidth=1, height=140)
+        m1 = Label(f6, text="Total Beverage Price", bg="sandy brown", font=("Times", 15, "bold")).grid(row=0, column=0,
                                                                                                        padx=20, pady=1,
                                                                                                        sticky="W")
+        m1_e = Entry(f6, width=18, font="arial 15", bd=3, relief="sunken").grid(row=0, column=1, padx=10, pady=1)
+
+        m2 = Label(f6, text="Total Dishes Price", bg="sandy brown", font=("Times", 15, "bold")).grid(row=1, column=0,
+                                                                                                     padx=20, pady=1,
+                                                                                                     sticky="W")
         m2_e = Entry(f6, width=18, font="arial 15", bd=3, relief="sunken").grid(row=1, column=1, padx=10, pady=1)
 
         m3 = Label(f6, text="Total Alcohol  Price", bg="sandy brown", font=("Times", 15, "bold")).grid(row=2, column=0,
                                                                                                        padx=20, pady=1,
                                                                                                        sticky="W")
-        m3_e = Entry(f6, width=18, font="arial 1", bd=3, relief="sunken").place(x = 198 , y = 67 , width = 176, height = 30)
+        m3_e = Entry(f6, width=18, font="arial 1", bd=3, relief="sunken").place(x=198, y=67, width=176, height=30)
 
         m4 = Label(f6, text="Total Beverage Tax", bg="sandy brown", font=("Times", 15, "bold")).grid(row=0, column=3,
-                                                                                                       padx=20, pady=1,
-                                                                                                       sticky="W")
+                                                                                                     padx=20, pady=1,
+                                                                                                     sticky="W")
         m4_e = Entry(f6, width=18, font="arial 15", bd=3, relief="sunken").grid(row=0, column=4, padx=10, pady=1)
 
         m5 = Label(f6, text="Total Dishes Tax", bg="sandy brown", font=("Times", 15, "bold")).grid(row=1, column=3,
-                                                                                                     padx=20, pady=1,
-                                                                                                     sticky="W")
+                                                                                                   padx=20, pady=1,
+                                                                                                   sticky="W")
         m5_e = Entry(f6, width=18, font="arial 15", bd=3, relief="sunken").grid(row=1, column=4, padx=10, pady=1)
 
         m6 = Label(f6, text="Total Alcohol Tax", bg="sandy brown", font=("Times", 15, "bold")).grid(row=2, column=3,
-                                                                                                       padx=20, pady=1,
-                                                                                                       sticky="W")
+                                                                                                    padx=20, pady=1,
+                                                                                                    sticky="W")
         m6_e = Entry(f6, width=18, font="arial 1", bd=3, relief="sunken").place(x=572, y=67, width=176, height=30)
+
+
 # Creating Window.
 root = Tk()
 root.configure(bg="sandy brown")
